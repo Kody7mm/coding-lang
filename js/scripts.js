@@ -1,11 +1,11 @@
 $(document).ready(function () {
   $("form#selector").submit(function () {
     event.preventDefault();
-    const que1 = parseInt($("input:radio[name=queOne]:checked").val());
-    const que2 = parseInt($("input:radio[name=queTwo]:checked").val());
-    const que3 = parseInt($("input:radio[name=queThree]:checked").val());
-    const que4 = parseInt($("input:radio[name=queFour]:checked").val());
-    const que5 = parseInt($("input:radio[name=queFive]:checked").val());
+    const queOne = parseInt($("input:radio[name=radio1]:checked").val());
+    const queTwo = parseInt($("input:radio[name=radio2]:checked").val());
+    const queThree = parseInt($("input:radio[name=radio3]:checked").val());
+    const queFour = parseInt($("input:radio[name=radio4]:checked").val());
+    const queFive = parseInt($("input:radio[name=radio5]:checked").val());
 
     $("#javascript").hide()
     $("#python").hide()
