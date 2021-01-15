@@ -1,31 +1,27 @@
 $(document).ready(function () {
-  $("form").submit(function ()
-  event.preventDefault();
-  const queOne = parseInt($("input:radio[name=question1]:checked").val());
-  const queTwo = parseInt($("input:radio[name=question2]:checked").val());
-  const queThree = parseInt($("input:radio[name=question3]:checked").val());
-  const queFour = parseInt($("input:radio[name=question4]:checked").val());
-  const queFive = parseInt($("input:radio[name=question5]:checked").val());
-  const total = (questionOne + questionTwo + questionThree + questionFour + questionFive);
-  let userName = $("input#name").val(); {
+  $("form#selector").submit(function () {
+    event.preventDefault();
+    const que1 = parseInt($("input:radio[name=queOne]:checked").val());
+    const que2 = parseInt($("input:radio[name=queTwo]:checked").val());
+    const que3 = parseInt($("input:radio[name=queThree]:checked").val());
+    const que4 = parseInt($("input:radio[name=queFour]:checked").val());
+    const que5 = parseInt($("input:radio[name=queFive]:checked").val());
 
-  });
-    });
+    $("#javascript").hide()
+    $("#python").hide()
+    $("#ruby").hide()
+    $(".result").hide()
 
-
-
-
-// function showValues() {
-//   var fields = $(":input").serializeArray();
-//   $("#results").empty();
-//   jQuery.each(fields, function (i, field) {
-//     $("#results").append(field.value + " ");
-//   });
-// }
-
-// $(":checkbox, :radio").click(showValues);
-// $("select").change(showValues);
-// showValues();
-event.preventDefault();
-  });
+    if (qeu1 == true || que3 == true) {
+      $(".answer").fadeIn();
+      $("#ruby").prepend();
+      $("#ruby").fadeIn();
+    } else if (que2 == true || que4 == true) {
+      $(".answer").fadeIn();
+      $("#javascript").fadeIn();
+    } else { 
+      $(".answer").fadeIn();
+      $("#python").fadeIn()
+    }
+});
 });
