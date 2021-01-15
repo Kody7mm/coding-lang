@@ -20,3 +20,9 @@
   font-size: 16px;
   display: none;
 }
+
+h1.title {
+  background-color: beige;
+  text-align: center;
+  border-style:groove;
+}
