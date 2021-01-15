@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $("form#selector").submit(function () {
+$(document).ready(function() {
+  $("form#selector").submit(function() {
     event.preventDefault();
     const queOne = parseInt($("input:radio[name=radio1]:checked").val());
     const queTwo = parseInt($("input:radio[name=radio2]:checked").val());
@@ -7,10 +7,10 @@ $(document).ready(function () {
     const queFour = parseInt($("input:radio[name=radio4]:checked").val());
     const queFive = parseInt($("input:radio[name=radio5]:checked").val());
 
-    $("#javascript").hide()
-    $("#python").hide()
-    $("#ruby").hide()
-    $(".result").hide()
+    $("#javascript").hide();
+    $("#python").hide();
+    $("#ruby").hide();
+    $(".result").hide();
 
     if (qeu1 == true || que3 == true) {
       $(".answer").fadeIn();
@@ -19,9 +19,9 @@ $(document).ready(function () {
     } else if (que2 == true || que4 == true) {
       $(".answer").fadeIn();
       $("#javascript").fadeIn();
-    } else { 
+    } else {
       $(".answer").fadeIn();
-      $("#python").fadeIn()
+      $("#python").fadeIn();
     }
-});
+  });
 });
