@@ -1,21 +1,17 @@
-$(document).ready(function() {
-  $("form#name").submit(function(event){
-    event.preventDefault();
-    // const queOne = $("input#queOne").val();
-    // const queTwo = $("input#queTwo").val();
-    // const queThree = $("input#queThree").val();
-    // const queFour = $("input#queFour").val();
-    // const queFive = $("input#queFive").val();
-    
-    const queOne = $("input:radio[name=queOne]:checked").val();
+$(document).ready(function () {
+  $("form").submit(function (event) {
+    function showValues() {
+      var fields = $(":input").serializeArray();
+      $("#results").empty();
+      jQuery.each(fields, function (i, field) {
+        $("#results").append(field.value + " ");
+      });
+    }
 
-  
-    $(".queOne").text(queOne);
-    $(".queTwo").text(queTwo);
-    $(".queThree").text(queThree);
-    $(".queFour").text(queFour);
-    $(".queFive").text(queFive);
-
+    $(":checkbox, :radio").click(showValues);
+    $("select").change(showValues);
+    showValues();
     $("#queAnswer").show();
-    });
+    event.preventDefault();
   });
+});
