@@ -14,29 +14,18 @@ $(document).ready(function () {
     $("#ruby").hide();
     $(".results").hide();
 
-    if(total >= 9) {
+    if(total >= 5) {
       $(".answer").fadeIn();
       $("#ruby").prepend();
       $("#ruby").fadeIn();
-    }else if(total <= 8 && total > 6) {
+    }else if(total <= 4 && total > 3) {
       $(".answer").fadeIn();
       $("#javascript").fadeIn();
-    }else if(total < 6) {
+    }else if(total <= 2) {
       $(".answer").fadeIn();
       $("#python").fadeIn();
     }
 
-    // if (qeuOne == true || queThree == true) {
-    //   $(".answer").fadeIn();
-    //   $("#ruby").prepend();
-    //   $("#ruby").fadeIn();
-    // } else if (queTwo == true || queFour == true) {
-    //   $(".answer").fadeIn();
-    //   $("#javascript").fadeIn();
-    // } else {
-    //   $(".answer").fadeIn();
-    //   $("#python").fadeIn();
-    // }
   });
 });
 
